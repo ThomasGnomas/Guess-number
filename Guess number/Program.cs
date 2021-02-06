@@ -1,31 +1,27 @@
-﻿using System;
+using System;
 
 namespace C_sharp
 {
     class Program
     {
         static void Main(string[] args)
-        {
+        {   
+            Random random = new Random();
+            int randomNumber = random.Next(1, 100);
+            
+            Console.Write("Your guess: ");
+            int userGuess = Convert.ToInt32(Console.ReadLine());
 
-            string userName = UserName();
+            if (userGuess == randomNumber)
+            {
+                Console.WriteLine("Correct number");
+            }
+            else
+            {
+                Console.WriteLine("Wrong number");
+            }
 
             Console.ReadKey();
-        }
-
-        static void ColorMessage(ConsoleColor color, string text){
-            Console.ForegroundColor = color;
-
-            Console.WriteLine(text);
-
-            Console.ResetColor();
-        }
-
-        static string UserName(){
-            ColorMessage(ConsoleColor.Blue, "What's your name? ");
-
-            string userName = Console.ReadLine();
-
-            return userName;
         }
     }
 }
