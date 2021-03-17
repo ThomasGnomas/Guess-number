@@ -1,6 +1,6 @@
 using System;
 
-namespace bullshit
+namespace GuessNumber
 {
     class Program
     {
