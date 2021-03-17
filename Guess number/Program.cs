@@ -1,13 +1,13 @@
 using System;
 
-namespace C_sharp
+namespace bullshit
 {
     class Program
     {
         static void Main(string[] args)
         {
             Greeetings();
-            RandomNumer();
+            RandomNumer(StRange(), NdRange());
 
             Console.ReadLine();
         }
@@ -37,12 +37,9 @@ namespace C_sharp
         }
 
         //converting both number into random number
-        static int RandomNumer()
+        static int RandomNumer(int x, int y)
         {
             int randomInt;
-            
-            int x = StRange();
-            int y = NdRange();
 
             while (x > y)
             {
